@@ -1,0 +1,20 @@
+# node / npm
+node_modules
+_temp-types
+temp-types
+package-lock.json
+node-test.js
+
+*.log
+
+# IDE stuff
+**/.idea
+
+# OS stuff
+.DS_Store
+.tmp
+
+# Build
+dist
+lib
+.size-snapshot.json

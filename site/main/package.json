@@ -1,0 +1,26 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "homepage": "https://getanalytics.io",
+  "main": "index.js",
+  "author": "David Wells <hello@davidwells.io> (@davidwells)",
+  "license": "MIT",
+  "scripts": {
+    "start": "rm -rf .cache && gatsby develop",
+    "develop": "rm -rf .cache && gatsby develop",
+    "build": "gatsby build",
+    "postbuild": "node scripts/sitemap.js && cp _redirects public",
+    "serve": "http-server public",
+    "deploy": "./node_modules/.bin/netlify deploy -p --dir public",
+    "deploydev": "./node_modules/.bin/netlify deploy --dir public"
+  },
+  "dependencies": {
+    "gatsby": "^2.13.20",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "netlify-cli": "2.41.0",
+    "sitemap": "^4.1.1"
+  }
+}

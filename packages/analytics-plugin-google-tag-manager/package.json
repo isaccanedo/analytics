@@ -1,0 +1,55 @@
+{
+  "name": "@analytics/google-tag-manager",
+  "version": "0.5.2",
+  "description": "Google tag manager plugin for 'analytics' module",
+  "projectMeta": {
+    "provider": {
+      "name": "Google Tag Manager",
+      "url": "https://tagmanager.google.com/"
+    },
+    "platforms": {
+      "browser": "./src/browser.js"
+    }
+  },
+  "keywords": [
+    "analytics",
+    "analytics-project",
+    "analytics-plugin",
+    "Gtm",
+    "Google tag manager",
+    "google-tag-manager"
+  ],
+  "author": "David Wells",
+  "license": "MIT",
+  "scripts": {
+    "docs": "node ../analytics-cli/bin/run docs",
+    "build": "node ../../scripts/build/index.js",
+    "watch": "node ../../scripts/build/_watch.js",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "es": "../../node_modules/.bin/babel-node ./testBabel.js"
+  },
+  "main": "lib/analytics-plugin-google-tag-manager.cjs.js",
+  "globalName": "analyticsGtagManager",
+  "jsnext:main": "lib/analytics-plugin-google-tag-manager.es.js",
+  "module": "lib/analytics-plugin-google-tag-manager.es.js",
+  "browser": {
+    "./lib/analytics-plugin-google-tag-manager.cjs.js": "./lib/analytics-plugin-google-tag-manager.browser.cjs.js",
+    "./lib/analytics-plugin-google-tag-manager.es.js": "./lib/analytics-plugin-google-tag-manager.browser.es.js"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "README.md"
+  ],
+  "homepage": "https://github.com/DavidWells/analytics#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidWells/analytics.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1"
+  }
+}

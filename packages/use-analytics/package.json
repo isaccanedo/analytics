@@ -1,0 +1,51 @@
+{
+  "name": "use-analytics",
+  "version": "0.0.5",
+  "description": "Analytics hooks for React",
+  "author": "DavidWells",
+  "license": "MIT",
+  "homepage": "https://github.com/DavidWells/analytics#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidWells/analytics.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "microbundle --no-compress --format modern,cjs",
+    "watch": "microbundle watch --no-compress --format modern,cjs",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.2",
+    "mini-create-react-context": "^0.4.1",
+    "tiny-invariant": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "babel-eslint": "^10.0.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "analytics",
+    "analytics-project",
+    "metrics",
+    "telemetry",
+    "event tracking",
+    "page tracking",
+    "user tracking",
+    "react",
+    "hooks"
+  ]
+}

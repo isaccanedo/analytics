@@ -1,0 +1,29 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": ["--no-package-lock"]
+    },
+    "publish": {
+      "allowBranch": [
+        "master",
+        "next"
+      ],
+      "conventionalCommits": true,
+      "message": "chore(release): :tada: :rocket: [skip ci]"
+    }
+  },
+  "ignoreChanges": [
+    "**/CHANGELOG.md",
+    "**/package-lock.json",
+    "**/.gitignore",
+    "**/test/**",
+    "packages/**/**.html",
+    "lerna.json",
+    "package.json",
+    "README.md"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "@analytics/customerio",
+  "version": "0.2.1",
+  "description": "Customer.io integration for 'analytics' module",
+  "projectMeta": {
+    "provider": {
+      "name": "Customer.io",
+      "url": "https://customer.io/"
+    },
+    "platforms": {
+      "browser": "./src/browser.js",
+      "node": "./src/node.js"
+    }
+  },
+  "keywords": [
+    "analytics",
+    "analytics-project",
+    "analytics-plugin",
+    "customerio",
+    "customer.io"
+  ],
+  "author": "David Wells",
+  "license": "MIT",
+  "scripts": {
+    "docs": "node ../analytics-cli/bin/run docs",
+    "types": "../../node_modules/.bin/jsdoc -t ../../node_modules/tsd-jsdoc/dist -r ./src/ -d temp-types",
+    "build": "node ../../scripts/build/index.js",
+    "watch": "node ../../scripts/build/_watch.js",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "es": "../../node_modules/.bin/babel-node ./testBabel.js"
+  },
+  "main": "lib/analytics-plugin-customerio.cjs.js",
+  "globalName": "analyticsCustomerio",
+  "jsnext:main": "lib/analytics-plugin-customerio.es.js",
+  "module": "lib/analytics-plugin-customerio.es.js",
+  "browser": {
+    "./lib/analytics-plugin-customerio.cjs.js": "./lib/analytics-plugin-customerio.browser.cjs.js",
+    "./lib/analytics-plugin-customerio.es.js": "./lib/analytics-plugin-customerio.browser.es.js"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "README.md"
+  ],
+  "homepage": "https://github.com/DavidWells/analytics#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidWells/analytics.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1"
+  },
+  "dependencies": {
+    "customerio-node": "^0.5.0"
+  }
+}

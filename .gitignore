@@ -1,0 +1,19 @@
+# node / npm
+node_modules
+.size-snapshot.json
+package-lock.json
+*.log
+.netlify
+# IDE stuff
+**/.idea
+
+# OS stuff
+.DS_Store
+.tmp
+
+dist
+misc
+queues
+TODO.md
+types/
+misc.js

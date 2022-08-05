@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Facebook tracking pixel",
+    "url": "https://github.com/DavidWells/analytics/issues/54#issuecomment-735413632",
+    "description": "Send data to Facebook Tracking pixel"
+  },
+  {
+    "name": "Yandex",
+    "url": "https://github.com/pechischev/analytics-yandex-metric-plugin",
+    "description": "Send data to Yandex metrica"
+  },
+  {
+    "name": "analytics-fetch",
+    "url": "https://www.npmjs.com/package/@standardorg/analytics-fetch",
+    "description": "Integration with the browser's fetch API for analytics"
+  },
+  {
+    "name": "LinkedIn Pixel",
+    "url": "https://www.npmjs.com/package/analytics-plugin-linkedin",
+    "repo": "https://github.com/deevus/analytics-plugin-linkedin",
+    "description": "Adds Analytics support for Linkedin tracking pixel"
+  },
+  {
+    "name": "Logrocket",
+    "url": "https://www.npmjs.com/package/analytics-plugin-logrocket",
+    "description": "Adds Analytics support for LogRocket"
+  },
+  {
+    "name": "Indicative",
+    "url": "https://www.npmjs.com/package/analytics-plugin-indicative",
+    "description": "Adds Analytics support for Indicative"
+  },
+  {
+    "name": "Plausible",
+    "url": "https://www.npmjs.com/package/analytics-plugin-plausible",
+    "description": "Adds Analytics support for Plausible"
+  },
+  {
+    "name": "Reddit Pixel",
+    "url": "https://www.npmjs.com/package/analytics-plugin-reddit-pixel",
+    "description": "Adds Analytics support for Reddit Pixel"
+  },
+  {
+    "name": "Splitbee",
+    "url": "https://www.npmjs.com/package/analytics-plugin-splitbee",
+    "description": "Adds Analytics support for Splitbee"
+  },
+  {
+    "name": "ActiveCampaign",
+    "url": "https://github.com/deevus/analytics-plugin-activecampaign",
+    "description": "Adds Analytics support for ActiveCampaign"
+  },
+  {
+    "name": "ProfitWell",
+    "url": "https://github.com/deevus/analytics-plugin-profitwell",
+    "description": "Adds Analytics support for ProfitWell"
+  },
+  {
+    "name": "Tapfiliate",
+    "url": "https://github.com/deevus/analytics-plugin-tapfiliate",
+    "description": "Adds Analytics support for Tapfiliate"
+  },
+  {
+    "name": "RudderStack",
+    "url": "https://www.npmjs.com/package/begrowth-analytics-rudderstack",
+    "description": "Adds Analytics support for RudderStack"
+  }
+]

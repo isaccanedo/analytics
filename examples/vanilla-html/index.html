@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Using Analytics in HTML</title>
+    <!-- Include `analytics` from CDN -->
+    <script src="https://unpkg.com/analytics/dist/analytics.min.js"></script>
+    <script src="https://unpkg.com/@analytics/google-analytics/dist/@analytics/google-analytics.min.js"></script>
+    <script type="text/javascript">
+      /* Initialize analytics */
+      var Analytics = _analytics.init({
+        app: 'analytics-html-demo',
+        debug: true,
+        plugins: [
+          // attach google analytics plugin
+          analyticsGa.default({
+            trackingId: 'UA-126647663-3'
+          })
+          // ... add any other third party analytics plugins
+        ]
+      })
+      /* Fire page view */
+      Analytics.page()
+      /* Attaching a listener */
+      Analytics.on('*', ({ payload }) => {
+        console.log(`Event ${payload.type}`, payload)
+      });
+    </script>
+  </head>
+  <body>
+    <h1>
+      Using Analytics with regular HTML
+    </h1>
+
+    <p>Open the console to see page views firing. Also checkout the networks tab</p>
+
+    <button onClick="trackEvent()">
+      Track Click
+    </button>
+
+    <button onClick="pageView()">
+      Fire page view
+    </button>
+
+    <button onClick="identifyVisitor()">
+      Identify visitor
+    </button>
+
+    <p>
+      <br />
+      <a href="https://getanalytics.io/">View the docs</a>
+    </p>
+
+    <script type="text/javascript">
+      function trackEvent() {
+        Analytics.track('buttonClicked')
+      }
+      function pageView() {
+        Analytics.page()
+      }
+      function identifyVisitor() {
+        Analytics.identify('user-123', {
+          pro: true,
+        })
+      }
+    </script>
+  </body>
+</html>

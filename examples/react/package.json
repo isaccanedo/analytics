@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "react-example",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "push": "npm run build && npm run deploy",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "@analytics/segment": "^0.2.3",
+    "@reach/router": "^1.2.1",
+    "analytics": "^0.2.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-scripts": "3.0.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

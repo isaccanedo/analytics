@@ -1,0 +1,38 @@
+.App h2 a {
+  text-decoration: none;
+}
+.App h2 {
+  display: flex;
+  align-items: center;
+}
+.install {
+  font-size: 14px;
+  font-family: monospace;
+  margin-left: 20px;
+  color: #353535;
+  padding: 10px;
+  background: #eaeaea;
+  border-radius: 3px;
+}
+.about {
+  max-width: 660px;
+  line-height: 1.6;
+}
+.example-buttons {
+  display: flex;
+  align-items: center;
+}
+.example-buttons button {
+  margin-right: 10px;
+}
+.try-it {
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .try-it {
+    display: none;
+  }
+}

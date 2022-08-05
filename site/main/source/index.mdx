@@ -1,0 +1,103 @@
+---
+title: Open source analytics library for browsers & node.js
+description: Analytics is a lightweight abstraction library for tracking page views, custom events, & identify visitors
+pageTitle: Analytics Documentation
+subTitle: A tiny open-source analytics abstraction library for browsers & node.js
+---
+
+Analytics is a lightweight abstraction library for tracking page views, custom events, & identify visitors. It is pluggable & designed to work with any [third-party analytics tool](https://getanalytics.io/plugins/) or your own backend.
+
+##  About the library
+
+Companies frequently change analytics requirements based on evolving business needs.
+
+This results in a lot of complexity, maintenance, and extra code when adding/removing analytic services to a site or application.
+
+This library aims to solves that with a simple pluggable abstraction layer.
+
+<img src="https://user-images.githubusercontent.com/532272/68093602-42036880-fe4c-11e9-8bb9-008045da8a32.gif" />
+
+### Driving philosophy
+
+- You should never be locked into an analytics tool
+- DX is paramount. Adding & removing analytic tools from your application should be easy
+- Respecting visitor privacy settings & allowing for opt-out mechanisms is crucial
+- A pluggable API makes adding new business requests easy
+
+To add or remove an analytics provider, adjust the `plugins` you load into `analytics`.
+
+## Features
+
+- [x] Extendable - Bring your own third party tool & plugins
+- [x] Test & debug analytics integrations with time travel & offline mode
+- [x] Add functionality/modify tracking calls with baked in lifecycle hooks
+- [x] Isomorphic. Works in browser & on server
+- [x] Queues events to send when analytic libraries are loaded
+- [x] Works offline
+- [See the API docs](https://getanalytics.io/api/)
+
+## How to Install
+
+Install the `analytics` package from [npm](https://npmjs.com/package/analytics)
+
+```bash
+npm install analytics --save
+```
+
+Or from a CDN as a script tag:
+
+```html
+<script src="https://unpkg.com/analytics/dist/analytics.min.js"></script>
+```
+
+## Using in your app
+
+Initialize analytics, include your analytic tools, & start tracking events.
+
+See the [getting started section](https://getanalytics.io/tutorials/getting-started/) for more details.
+
+```js
+import Analytics from 'analytics'
+import googleAnalyticsPlugin from '@analytics/google-analytics'
+import customerIOPlugin from '@analytics/customerio'
+
+/* Initialize analytics */
+const analytics = Analytics({
+  app: 'my-app-name',
+  version: 100,
+  plugins: [
+    googleAnalyticsPlugin({
+      trackingId: 'UA-121991291',
+    }),
+    customerIOPlugin({
+      siteId: '123-xyz'
+    })
+  ]
+})
+
+/* Track a page view */
+analytics.page()
+
+/* Track a custom event */
+analytics.track('userPurchase', {
+  price: 20
+  item: 'pink socks'
+})
+
+/* Identify a visitor */
+analytics.identify('user-id-xyz', {
+  firstName: 'bill',
+  lastName: 'murray',
+  email: 'da-coolest@aol.com'
+})
+```
+
+## API reference
+
+- [View the full api docs](https://getanalytics.io/api/)
+
+## Using Plugins
+
+- [Using plugins](https://getanalytics.io/plugins/)
+- [Writing plugins](https://getanalytics.io/plugins/writing-plugins/)
+- [Learn about the plugin lifecycle](https://getanalytics.io/lifecycle/)
